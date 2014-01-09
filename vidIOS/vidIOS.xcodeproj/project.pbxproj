@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		37DE8B8A187F1FCB003E8B70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DE8B89187F1FCB003E8B70 /* Foundation.framework */; };
+		37DE8B8C187F1FCB003E8B70 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DE8B8B187F1FCB003E8B70 /* CoreGraphics.framework */; };
+		37DE8B8E187F1FCB003E8B70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DE8B8D187F1FCB003E8B70 /* UIKit.framework */; };
+		37DE8B94187F1FCB003E8B70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37DE8B92187F1FCB003E8B70 /* InfoPlist.strings */; };
+		37DE8B96187F1FCB003E8B70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DE8B95187F1FCB003E8B70 /* main.m */; };
+		37DE8B9A187F1FCB003E8B70 /* DKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DE8B99187F1FCB003E8B70 /* DKAppDelegate.m */; };
+		37DE8B9D187F1FCB003E8B70 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37DE8B9B187F1FCB003E8B70 /* Main_iPhone.storyboard */; };
+		37DE8BA0187F1FCB003E8B70 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37DE8B9E187F1FCB003E8B70 /* Main_iPad.storyboard */; };
+		37DE8BA3187F1FCB003E8B70 /* DKFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DE8BA2187F1FCB003E8B70 /* DKFirstViewController.m */; };
+		37DE8BA6187F1FCB003E8B70 /* DKSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DE8BA5187F1FCB003E8B70 /* DKSecondViewController.m */; };
+		37DE8BA8187F1FCB003E8B70 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37DE8BA7187F1FCB003E8B70 /* Images.xcassets */; };
+		37DE8BAF187F1FCB003E8B70 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DE8BAE187F1FCB003E8B70 /* XCTest.framework */; };
+		37DE8BB0187F1FCB003E8B70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DE8B89187F1FCB003E8B70 /* Foundation.framework */; };
+		37DE8BB1187F1FCB003E8B70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DE8B8D187F1FCB003E8B70 /* UIKit.framework */; };
+		37DE8BB9187F1FCB003E8B70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37DE8BB7187F1FCB003E8B70 /* InfoPlist.strings */; };
+		37DE8BBB187F1FCB003E8B70 /* vidIOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DE8BBA187F1FCB003E8B70 /* vidIOSTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		37DE8BB2187F1FCB003E8B70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37DE8B7E187F1FCB003E8B70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37DE8B85187F1FCB003E8B70;
+			remoteInfo = vidIOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		37DE8B86187F1FCB003E8B70 /* vidIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vidIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37DE8B89187F1FCB003E8B70 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		37DE8B8B187F1FCB003E8B70 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		37DE8B8D187F1FCB003E8B70 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		37DE8B91187F1FCB003E8B70 /* vidIOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "vidIOS-Info.plist"; sourceTree = "<group>"; };
+		37DE8B93187F1FCB003E8B70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		37DE8B95187F1FCB003E8B70 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		37DE8B97187F1FCB003E8B70 /* vidIOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vidIOS-Prefix.pch"; sourceTree = "<group>"; };
+		37DE8B98187F1FCB003E8B70 /* DKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKAppDelegate.h; sourceTree = "<group>"; };
+		37DE8B99187F1FCB003E8B70 /* DKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKAppDelegate.m; sourceTree = "<group>"; };
+		37DE8B9C187F1FCB003E8B70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		37DE8B9F187F1FCB003E8B70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		37DE8BA1187F1FCB003E8B70 /* DKFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKFirstViewController.h; sourceTree = "<group>"; };
+		37DE8BA2187F1FCB003E8B70 /* DKFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKFirstViewController.m; sourceTree = "<group>"; };
+		37DE8BA4187F1FCB003E8B70 /* DKSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKSecondViewController.h; sourceTree = "<group>"; };
+		37DE8BA5187F1FCB003E8B70 /* DKSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKSecondViewController.m; sourceTree = "<group>"; };
+		37DE8BA7187F1FCB003E8B70 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		37DE8BAD187F1FCB003E8B70 /* vidIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vidIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37DE8BAE187F1FCB003E8B70 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		37DE8BB6187F1FCB003E8B70 /* vidIOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "vidIOSTests-Info.plist"; sourceTree = "<group>"; };
+		37DE8BB8187F1FCB003E8B70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		37DE8BBA187F1FCB003E8B70 /* vidIOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = vidIOSTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37DE8B83187F1FCB003E8B70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37DE8B8C187F1FCB003E8B70 /* CoreGraphics.framework in Frameworks */,
+				37DE8B8E187F1FCB003E8B70 /* UIKit.framework in Frameworks */,
+				37DE8B8A187F1FCB003E8B70 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37DE8BAA187F1FCB003E8B70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37DE8BAF187F1FCB003E8B70 /* XCTest.framework in Frameworks */,
+				37DE8BB1187F1FCB003E8B70 /* UIKit.framework in Frameworks */,
+				37DE8BB0187F1FCB003E8B70 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37DE8B7D187F1FCB003E8B70 = {
+			isa = PBXGroup;
+			children = (
+				37DE8B8F187F1FCB003E8B70 /* vidIOS */,
+				37DE8BB4187F1FCB003E8B70 /* vidIOSTests */,
+				37DE8B88187F1FCB003E8B70 /* Frameworks */,
+				37DE8B87187F1FCB003E8B70 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		37DE8B87187F1FCB003E8B70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37DE8B86187F1FCB003E8B70 /* vidIOS.app */,
+				37DE8BAD187F1FCB003E8B70 /* vidIOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37DE8B88187F1FCB003E8B70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37DE8B89187F1FCB003E8B70 /* Foundation.framework */,
+				37DE8B8B187F1FCB003E8B70 /* CoreGraphics.framework */,
+				37DE8B8D187F1FCB003E8B70 /* UIKit.framework */,
+				37DE8BAE187F1FCB003E8B70 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		37DE8B8F187F1FCB003E8B70 /* vidIOS */ = {
+			isa = PBXGroup;
+			children = (
+				37DE8B98187F1FCB003E8B70 /* DKAppDelegate.h */,
+				37DE8B99187F1FCB003E8B70 /* DKAppDelegate.m */,
+				37DE8B9B187F1FCB003E8B70 /* Main_iPhone.storyboard */,
+				37DE8B9E187F1FCB003E8B70 /* Main_iPad.storyboard */,
+				37DE8BA1187F1FCB003E8B70 /* DKFirstViewController.h */,
+				37DE8BA2187F1FCB003E8B70 /* DKFirstViewController.m */,
+				37DE8BA4187F1FCB003E8B70 /* DKSecondViewController.h */,
+				37DE8BA5187F1FCB003E8B70 /* DKSecondViewController.m */,
+				37DE8BA7187F1FCB003E8B70 /* Images.xcassets */,
+				37DE8B90187F1FCB003E8B70 /* Supporting Files */,
+			);
+			path = vidIOS;
+			sourceTree = "<group>";
+		};
+		37DE8B90187F1FCB003E8B70 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				37DE8B91187F1FCB003E8B70 /* vidIOS-Info.plist */,
+				37DE8B92187F1FCB003E8B70 /* InfoPlist.strings */,
+				37DE8B95187F1FCB003E8B70 /* main.m */,
+				37DE8B97187F1FCB003E8B70 /* vidIOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		37DE8BB4187F1FCB003E8B70 /* vidIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				37DE8BBA187F1FCB003E8B70 /* vidIOSTests.m */,
+				37DE8BB5187F1FCB003E8B70 /* Supporting Files */,
+			);
+			path = vidIOSTests;
+			sourceTree = "<group>";
+		};
+		37DE8BB5187F1FCB003E8B70 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				37DE8BB6187F1FCB003E8B70 /* vidIOSTests-Info.plist */,
+				37DE8BB7187F1FCB003E8B70 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37DE8B85187F1FCB003E8B70 /* vidIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37DE8BBE187F1FCB003E8B70 /* Build configuration list for PBXNativeTarget "vidIOS" */;
+			buildPhases = (
+				37DE8B82187F1FCB003E8B70 /* Sources */,
+				37DE8B83187F1FCB003E8B70 /* Frameworks */,
+				37DE8B84187F1FCB003E8B70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = vidIOS;
+			productName = vidIOS;
+			productReference = 37DE8B86187F1FCB003E8B70 /* vidIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		37DE8BAC187F1FCB003E8B70 /* vidIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37DE8BC1187F1FCB003E8B70 /* Build configuration list for PBXNativeTarget "vidIOSTests" */;
+			buildPhases = (
+				37DE8BA9187F1FCB003E8B70 /* Sources */,
+				37DE8BAA187F1FCB003E8B70 /* Frameworks */,
+				37DE8BAB187F1FCB003E8B70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37DE8BB3187F1FCB003E8B70 /* PBXTargetDependency */,
+			);
+			name = vidIOSTests;
+			productName = vidIOSTests;
+			productReference = 37DE8BAD187F1FCB003E8B70 /* vidIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37DE8B7E187F1FCB003E8B70 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DK;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Daniel Karsh";
+				TargetAttributes = {
+					37DE8BAC187F1FCB003E8B70 = {
+						TestTargetID = 37DE8B85187F1FCB003E8B70;
+					};
+				};
+			};
+			buildConfigurationList = 37DE8B81187F1FCB003E8B70 /* Build configuration list for PBXProject "vidIOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 37DE8B7D187F1FCB003E8B70;
+			productRefGroup = 37DE8B87187F1FCB003E8B70 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37DE8B85187F1FCB003E8B70 /* vidIOS */,
+				37DE8BAC187F1FCB003E8B70 /* vidIOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37DE8B84187F1FCB003E8B70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37DE8BA0187F1FCB003E8B70 /* Main_iPad.storyboard in Resources */,
+				37DE8BA8187F1FCB003E8B70 /* Images.xcassets in Resources */,
+				37DE8B9D187F1FCB003E8B70 /* Main_iPhone.storyboard in Resources */,
+				37DE8B94187F1FCB003E8B70 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37DE8BAB187F1FCB003E8B70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37DE8BB9187F1FCB003E8B70 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37DE8B82187F1FCB003E8B70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37DE8B96187F1FCB003E8B70 /* main.m in Sources */,
+				37DE8BA6187F1FCB003E8B70 /* DKSecondViewController.m in Sources */,
+				37DE8B9A187F1FCB003E8B70 /* DKAppDelegate.m in Sources */,
+				37DE8BA3187F1FCB003E8B70 /* DKFirstViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37DE8BA9187F1FCB003E8B70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37DE8BBB187F1FCB003E8B70 /* vidIOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		37DE8BB3187F1FCB003E8B70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37DE8B85187F1FCB003E8B70 /* vidIOS */;
+			targetProxy = 37DE8BB2187F1FCB003E8B70 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		37DE8B92187F1FCB003E8B70 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37DE8B93187F1FCB003E8B70 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		37DE8B9B187F1FCB003E8B70 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37DE8B9C187F1FCB003E8B70 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		37DE8B9E187F1FCB003E8B70 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37DE8B9F187F1FCB003E8B70 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		37DE8BB7187F1FCB003E8B70 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37DE8BB8187F1FCB003E8B70 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		37DE8BBC187F1FCB003E8B70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		37DE8BBD187F1FCB003E8B70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		37DE8BBF187F1FCB003E8B70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "vidIOS/vidIOS-Prefix.pch";
+				INFOPLIST_FILE = "vidIOS/vidIOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		37DE8BC0187F1FCB003E8B70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "vidIOS/vidIOS-Prefix.pch";
+				INFOPLIST_FILE = "vidIOS/vidIOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		37DE8BC2187F1FCB003E8B70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/vidIOS.app/vidIOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "vidIOS/vidIOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "vidIOSTests/vidIOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		37DE8BC3187F1FCB003E8B70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/vidIOS.app/vidIOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "vidIOS/vidIOS-Prefix.pch";
+				INFOPLIST_FILE = "vidIOSTests/vidIOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37DE8B81187F1FCB003E8B70 /* Build configuration list for PBXProject "vidIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37DE8BBC187F1FCB003E8B70 /* Debug */,
+				37DE8BBD187F1FCB003E8B70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37DE8BBE187F1FCB003E8B70 /* Build configuration list for PBXNativeTarget "vidIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37DE8BBF187F1FCB003E8B70 /* Debug */,
+				37DE8BC0187F1FCB003E8B70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		37DE8BC1187F1FCB003E8B70 /* Build configuration list for PBXNativeTarget "vidIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37DE8BC2187F1FCB003E8B70 /* Debug */,
+				37DE8BC3187F1FCB003E8B70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 37DE8B7E187F1FCB003E8B70 /* Project object */;
+}
