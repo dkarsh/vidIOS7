@@ -17,6 +17,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+//    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"00_loading_screen"]];
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"usersFonts" size:20.0f], NSFontAttributeName, nil] forState:UIControlStateNormal];
+    
+    for (NSString* family in [UIFont familyNames])
+    {
+        NSLog(@"%@", family);
+        
+        for (NSString* name in [UIFont fontNamesForFamilyName: family])
+        {
+            NSLog(@"  %@", name);
+        }
+    }
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
