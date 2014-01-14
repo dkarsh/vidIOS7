@@ -27,12 +27,11 @@
 {
     [super viewDidLoad];
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
-    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"usersFonts" size:20.0f], NSFontAttributeName, nil] forState:UIControlStateNormal];
-    
-    
-//    NSDictionary *textAttributes = @{ NSFontAttributeName:[UIFont fontWithName:@"usersFonts" size:20.0] };
+//    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"usersFonts" size:13.0f], NSFontAttributeName, nil] forState:UIControlStateNormal];
+      
+//    NSDictionary *textAttributes = @{ NSFontAttributeName:[UIFont fontWithName:@"STHeitiSC-Light" size:13.0] };
 //    [[UINavigationBar appearance] setTitleTextAttributes: textAttributes];
-    
+//
     
     for (NSString* family in [UIFont familyNames])
     {

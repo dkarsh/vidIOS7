@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3750874418838D16009478D1 /* DKProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750874318838D16009478D1 /* DKProgressViewController.m */; };
 		375128951883317E001934A4 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 375128831883317E001934A4 /* AFHTTPRequestOperation.m */; };
 		375128961883317E001934A4 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 375128851883317E001934A4 /* AFHTTPRequestOperationManager.m */; };
 		375128971883317E001934A4 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 375128871883317E001934A4 /* AFHTTPSessionManager.m */; };
@@ -25,6 +26,7 @@
 		375128B4188333CF001934A4 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 375128AD188333CF001934A4 /* UIWebView+AFNetworking.m */; };
 		375128B718833554001934A4 /* DKFriendViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 375128B618833554001934A4 /* DKFriendViewCell.m */; };
 		375128BA18833606001934A4 /* DKFBFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = 375128B918833606001934A4 /* DKFBFriend.m */; };
+		375128BD18837191001934A4 /* PAPImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 375128BC18837191001934A4 /* PAPImageView.m */; };
 		377C17C71880828500DEEE72 /* DKLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 377C17C61880828500DEEE72 /* DKLogInViewController.m */; };
 		377C17D51880830700DEEE72 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 377C17C91880830700DEEE72 /* FacebookSDK.framework */; };
 		377C17D61880830700DEEE72 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 377C17CA1880830700DEEE72 /* FacebookSDKResources.bundle */; };
@@ -92,6 +94,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3750874218838D16009478D1 /* DKProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKProgressViewController.h; sourceTree = "<group>"; };
+		3750874318838D16009478D1 /* DKProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKProgressViewController.m; sourceTree = "<group>"; };
 		375128821883317E001934A4 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		375128831883317E001934A4 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		375128841883317E001934A4 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 		375128B618833554001934A4 /* DKFriendViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKFriendViewCell.m; sourceTree = "<group>"; };
 		375128B818833606001934A4 /* DKFBFriend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKFBFriend.h; sourceTree = "<group>"; };
 		375128B918833606001934A4 /* DKFBFriend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKFBFriend.m; sourceTree = "<group>"; };
+		375128BB18837191001934A4 /* PAPImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAPImageView.h; sourceTree = "<group>"; };
+		375128BC18837191001934A4 /* PAPImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAPImageView.m; sourceTree = "<group>"; };
 		377C17C51880828500DEEE72 /* DKLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKLogInViewController.h; sourceTree = "<group>"; };
 		377C17C61880828500DEEE72 /* DKLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKLogInViewController.m; sourceTree = "<group>"; };
 		377C17C91880830700DEEE72 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
@@ -432,20 +438,15 @@
 			children = (
 				37DE8B98187F1FCB003E8B70 /* DKAppDelegate.h */,
 				37DE8B99187F1FCB003E8B70 /* DKAppDelegate.m */,
-				377C18001881A0FE00DEEE72 /* DKConstants.h */,
-				377C18011881A0FE00DEEE72 /* DKConstants.m */,
-				377C18031881D30300DEEE72 /* PAPUtility.h */,
-				377C18041881D30300DEEE72 /* PAPUtility.m */,
-				377C18051881D30300DEEE72 /* PAPCache.h */,
-				377C18061881D30300DEEE72 /* PAPCache.m */,
 				377C17F7188091AA00DEEE72 /* DKWelcomeViewController.h */,
 				377C17F8188091AA00DEEE72 /* DKWelcomeViewController.m */,
 				377C17C51880828500DEEE72 /* DKLogInViewController.h */,
 				377C17C61880828500DEEE72 /* DKLogInViewController.m */,
-				37DE8B9B187F1FCB003E8B70 /* Main_iPhone.storyboard */,
 				37DE8BCA187F5863003E8B70 /* DKNavigationController.h */,
 				37DE8BCB187F5863003E8B70 /* DKNavigationController.m */,
-				37DE8B9E187F1FCB003E8B70 /* Main_iPad.storyboard */,
+				37DE8B9B187F1FCB003E8B70 /* Main_iPhone.storyboard */,
+				3750874218838D16009478D1 /* DKProgressViewController.h */,
+				3750874318838D16009478D1 /* DKProgressViewController.m */,
 				377C1826188312FB00DEEE72 /* DKNameViewController.h */,
 				377C1827188312FB00DEEE72 /* DKNameViewController.m */,
 				377C18291883132900DEEE72 /* DKFriendsViewController.h */,
@@ -456,6 +457,7 @@
 				375128B918833606001934A4 /* DKFBFriend.m */,
 				377C182C1883165E00DEEE72 /* DKtmpViewController.h */,
 				377C182D1883165E00DEEE72 /* DKtmpViewController.m */,
+				37DE8B9E187F1FCB003E8B70 /* Main_iPad.storyboard */,
 				37DE8BA7187F1FCB003E8B70 /* Images.xcassets */,
 				37DE8B90187F1FCB003E8B70 /* Supporting Files */,
 			);
@@ -465,6 +467,14 @@
 		37DE8B90187F1FCB003E8B70 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				377C18001881A0FE00DEEE72 /* DKConstants.h */,
+				377C18011881A0FE00DEEE72 /* DKConstants.m */,
+				375128BB18837191001934A4 /* PAPImageView.h */,
+				375128BC18837191001934A4 /* PAPImageView.m */,
+				377C18031881D30300DEEE72 /* PAPUtility.h */,
+				377C18041881D30300DEEE72 /* PAPUtility.m */,
+				377C18051881D30300DEEE72 /* PAPCache.h */,
+				377C18061881D30300DEEE72 /* PAPCache.m */,
 				37DE8B91187F1FCB003E8B70 /* vidIOS-Info.plist */,
 				37DE8B92187F1FCB003E8B70 /* InfoPlist.strings */,
 				37DE8B95187F1FCB003E8B70 /* main.m */,
@@ -540,6 +550,14 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Daniel Karsh";
 				TargetAttributes = {
+					37DE8B85187F1FCB003E8B70 = {
+						DevelopmentTeam = JJ2KCCE9WP;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
+					};
 					37DE8BAC187F1FCB003E8B70 = {
 						TestTargetID = 37DE8B85187F1FCB003E8B70;
 					};
@@ -609,6 +627,7 @@
 				377C17D91880830700DEEE72 /* Reachability.m in Sources */,
 				375128AE188333CF001934A4 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				375128951883317E001934A4 /* AFHTTPRequestOperation.m in Sources */,
+				375128BD18837191001934A4 /* PAPImageView.m in Sources */,
 				377C17C71880828500DEEE72 /* DKLogInViewController.m in Sources */,
 				375128981883317E001934A4 /* AFNetworkReachabilityManager.m in Sources */,
 				375128B0188333CF001934A4 /* UIAlertView+AFNetworking.m in Sources */,
@@ -618,6 +637,7 @@
 				377C18081881D30300DEEE72 /* PAPCache.m in Sources */,
 				375128961883317E001934A4 /* AFHTTPRequestOperationManager.m in Sources */,
 				375128971883317E001934A4 /* AFHTTPSessionManager.m in Sources */,
+				3750874418838D16009478D1 /* DKProgressViewController.m in Sources */,
 				375128B4188333CF001934A4 /* UIWebView+AFNetworking.m in Sources */,
 				377C18121881D3A000DEEE72 /* UIImage+AlphaAdditions.m in Sources */,
 				3751289C1883317E001934A4 /* AFURLResponseSerialization.m in Sources */,
@@ -768,6 +788,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/karsh/vidIOS7/vidIOS/External,
@@ -776,6 +797,7 @@
 				GCC_PREFIX_HEADER = "vidIOS/vidIOS-Prefix.pch";
 				INFOPLIST_FILE = "vidIOS/vidIOS-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5BA949C2-54AF-4900-93F9-19A6783E34C4";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -785,6 +807,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/karsh/vidIOS7/vidIOS/External,
@@ -793,6 +816,7 @@
 				GCC_PREFIX_HEADER = "vidIOS/vidIOS-Prefix.pch";
 				INFOPLIST_FILE = "vidIOS/vidIOS-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5BA949C2-54AF-4900-93F9-19A6783E34C4";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

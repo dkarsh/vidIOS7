@@ -19,12 +19,15 @@
 - (void) setFriend:(NSString*)friendID
 {
     NSString *imageURLString  =
-    [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=square",friendID];
+    [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?width=200&height=200",friendID];
     NSMutableURLRequest *request =
     [NSMutableURLRequest requestWithURL:[NSURL URLWithString:imageURLString]];
     [request addValue:@"image/*" forHTTPHeaderField:@"Accept"];
+    CALayer *layer = [_photoImageView layer];
+    layer.cornerRadius = 4.0f;
+    layer.masksToBounds = YES;
     [self.photoImageView setImageWithURLRequest:request
-                               placeholderImage:[UIImage imageNamed:@"heart"]
+                               placeholderImage:nil
                                         success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
                                             self.photoImageView.image = image;
                                         }

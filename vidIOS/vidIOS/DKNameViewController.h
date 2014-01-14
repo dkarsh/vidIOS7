@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DKNameViewController : UIViewController<UITextFieldDelegate>
+@interface DKNameViewController : UIViewController
+<UITextFieldDelegate,UICollectionViewDataSource,UICollectionViewDelegate>
 
+
+@property (weak, nonatomic) IBOutlet PFImageView *profileImage;
 @property (weak, nonatomic) IBOutlet UITextField *videoNameTextField;
+@property (weak, nonatomic) IBOutlet UICollectionView *friendsCollectionView;
+@property (weak, nonatomic) IBOutlet UICollectionView *invitedCollectionView;
+
 
 @end

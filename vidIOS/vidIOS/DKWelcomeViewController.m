@@ -12,6 +12,7 @@
 
 @interface DKWelcomeViewController ()
 {
+    NSMutableData *_data;
     BOOL firstLaunch;
 }
 
@@ -26,7 +27,8 @@
 
 #pragma mark - PFLoginViewController
 
-- (void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated
+{
     [super viewDidAppear:animated];
     
     // If not logged in, present login view controller
@@ -51,21 +53,42 @@
     }
 }
 
-
-
-
-
-
-- (BOOL)shouldProceedToMainInterface:(PFUser *)user {
+- (BOOL)shouldProceedToMainInterface:(PFUser *)user
+{
     if ([PAPUtility userHasValidFacebookData:[PFUser currentUser]]) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
-        [self dismissViewControllerAnimated:YES completion:^{
-           
-            
-        }];
+        [self saveMyImage];
+        
+        
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
+         UIRemoteNotificationTypeAlert|
+         UIRemoteNotificationTypeSound];
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
         return YES;
     }
     return NO;
+}
+
+- (void)saveMyImage
+{
+    NSURL *profilePictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large", [[PFUser currentUser] objectForKey:kPAPUserFacebookIDKey]]];
+    NSURLRequest *profilePictureURLRequest = [NSURLRequest requestWithURL:profilePictureURL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0f]; // Facebook profile picture cache policy: Expires in 2 weeks
+    [NSURLConnection connectionWithRequest:profilePictureURLRequest delegate:self];
+}
+
+#pragma mark - NSURLConnectionDataDelegate
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    _data = [[NSMutableData alloc] init];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [_data appendData:data];
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    [PAPUtility processFacebookProfilePictureData:_data];
 }
 
 #pragma mark - PFLoginViewController
@@ -290,14 +313,6 @@
 
 
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {

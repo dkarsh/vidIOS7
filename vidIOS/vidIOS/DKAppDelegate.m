@@ -45,8 +45,8 @@
     // Enable public read access by default, with any newly created PFObjects belonging to the current user
     [defaultACL setPublicReadAccess:YES];
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
-    
-    
+    [self monitorReachability];
+//    [self handlePush:launchOptions];
     return YES;
 }
 
@@ -128,6 +128,10 @@
     }
     
     return NO;
+}
+
+- (BOOL)isParseReachable {
+    return self.networkStatus != NotReachable;
 }
 
 

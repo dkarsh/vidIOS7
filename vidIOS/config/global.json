@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "_default": {
+            "link": "wedeeo"
+        }, 
+        "wedeeo": {
+            "applicationId": "5LZ2Y8L6nsJNB27jddOAXhfc2sEyhCGrHpAu2wiq", 
+            "masterKey": "EQTFC3KrlNUx3qzxKxC0kl4ds2IVa6tR4tlafwxr"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.16"
+    }
+}
