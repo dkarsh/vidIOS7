@@ -26,12 +26,34 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    PFQuery *iQuery = [PFQuery queryWithClassName:@"wedeeoProject"];
+    [iQuery whereKey:@"creator" equalTo:[PFUser currentUser]];
+    
+    PFQuery *anotherQuery = [PFQuery queryWithClassName:@"wedeeoProject"];
+    NSString *myFBid      = [[PFUser currentUser] objectForKey:kPAPUserFacebookIDKey];
+    
+    [anotherQuery whereKey:@"invitingFriends" equalTo:myFBid];
+    
+    PFQuery *query = [PFQuery orQueryWithSubqueries:@[iQuery,anotherQuery]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %d scores.", objects.count);
+            // Do something with the found objects
+            for (PFObject *object in objects) {
+                NSLog(@"%@", object.objectId);
+            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    //Uncomment the following line to preserve selection between presentations.
+//     self.clearsSelectionOnViewWillAppear = NO;
  
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+//     Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+//     self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 //- (void)viewWillDisappear:(BOOL)animated
 //{

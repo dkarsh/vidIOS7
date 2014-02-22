@@ -60,8 +60,22 @@
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [self performSegueWithIdentifier:@"addFriends" sender:nil];
+    [self performSegueWithIdentifier:@"saveStart" sender:nil];
     return YES;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    PFObject *wedeeoObject = [PFObject objectWithClassName:@"wedeeoProject"];
+    
+    [wedeeoObject setObject:self.invitingFriends            forKey:@"invitingFriends"];
+    [wedeeoObject setObject:[PFUser currentUser]            forKey:@"creator"];
+    [wedeeoObject setObject:self.videoNameTextField.text    forKey:@"projectName"];
+    
+    [wedeeoObject saveEventually:^(BOOL succeeded, NSError *error) {
+        
+    }];
+    
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section

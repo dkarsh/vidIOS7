@@ -20,3 +20,4 @@
     #import "DKConstants.h"
     #import "PAPUtility.h"
 #endif
+#define IOS7  ([[[[[UIDevice currentDevice] systemVersion]componentsSeparatedByString:@"."] objectAtIndex:0] intValue] >= 7)

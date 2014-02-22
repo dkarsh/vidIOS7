@@ -28,10 +28,7 @@
 		375128BA18833606001934A4 /* DKFBFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = 375128B918833606001934A4 /* DKFBFriend.m */; };
 		375128BD18837191001934A4 /* PAPImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 375128BC18837191001934A4 /* PAPImageView.m */; };
 		377C17C71880828500DEEE72 /* DKLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 377C17C61880828500DEEE72 /* DKLogInViewController.m */; };
-		377C17D51880830700DEEE72 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 377C17C91880830700DEEE72 /* FacebookSDK.framework */; };
-		377C17D61880830700DEEE72 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 377C17CA1880830700DEEE72 /* FacebookSDKResources.bundle */; };
 		377C17D71880830700DEEE72 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 377C17CD1880830700DEEE72 /* MBProgressHUD.m */; };
-		377C17D81880830700DEEE72 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 377C17CE1880830700DEEE72 /* Parse.framework */; };
 		377C17D91880830700DEEE72 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 377C17D11880830700DEEE72 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		377C17DC188085F800DEEE72 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 377C17DB188085F800DEEE72 /* MobileCoreServices.framework */; };
 		377C17DE1880864100DEEE72 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 377C17DD1880864100DEEE72 /* CFNetwork.framework */; };
@@ -81,6 +78,15 @@
 		37DE8BB9187F1FCB003E8B70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37DE8BB7187F1FCB003E8B70 /* InfoPlist.strings */; };
 		37DE8BBB187F1FCB003E8B70 /* vidIOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DE8BBA187F1FCB003E8B70 /* vidIOSTests.m */; };
 		37DE8BCC187F5863003E8B70 /* DKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DE8BCB187F5863003E8B70 /* DKNavigationController.m */; };
+		4222E4DF18B929A2008B9DB2 /* AVCamRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4222E4DA18B929A2008B9DB2 /* AVCamRecorder.m */; };
+		4222E4E018B929A2008B9DB2 /* AVCamUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4222E4DC18B929A2008B9DB2 /* AVCamUtilities.m */; };
+		4222E4E118B929A2008B9DB2 /* CaptureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4222E4DE18B929A2008B9DB2 /* CaptureManager.m */; };
+		4222E4E418B929B0008B9DB2 /* KZCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4222E4E318B929B0008B9DB2 /* KZCameraView.m */; };
+		4222E4E818B92A03008B9DB2 /* DKRecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4222E4E718B92A03008B9DB2 /* DKRecorderViewController.m */; };
+		4222E4EB18B936FD008B9DB2 /* DKMyCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4222E4EA18B936FD008B9DB2 /* DKMyCollectionController.m */; };
+		426C88E4188C867E00D03CE9 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 426C88E1188C867E00D03CE9 /* Parse.framework */; };
+		426C88E5188C867E00D03CE9 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 426C88E2188C867E00D03CE9 /* FacebookSDK.framework */; };
+		426C88E6188C867E00D03CE9 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 426C88E3188C867E00D03CE9 /* FacebookSDKResources.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,11 +144,8 @@
 		375128BC18837191001934A4 /* PAPImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAPImageView.m; sourceTree = "<group>"; };
 		377C17C51880828500DEEE72 /* DKLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKLogInViewController.h; sourceTree = "<group>"; };
 		377C17C61880828500DEEE72 /* DKLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKLogInViewController.m; sourceTree = "<group>"; };
-		377C17C91880830700DEEE72 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
-		377C17CA1880830700DEEE72 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
 		377C17CC1880830700DEEE72 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		377C17CD1880830700DEEE72 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		377C17CE1880830700DEEE72 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		377C17D01880830700DEEE72 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		377C17D11880830700DEEE72 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		377C17D31880830700DEEE72 /* TTTTimeIntervalFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTTimeIntervalFormatter.h; sourceTree = "<group>"; };
@@ -216,6 +219,21 @@
 		37DE8BBA187F1FCB003E8B70 /* vidIOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = vidIOSTests.m; sourceTree = "<group>"; };
 		37DE8BCA187F5863003E8B70 /* DKNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKNavigationController.h; sourceTree = "<group>"; };
 		37DE8BCB187F5863003E8B70 /* DKNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKNavigationController.m; sourceTree = "<group>"; };
+		4222E4D918B929A2008B9DB2 /* AVCamRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamRecorder.h; sourceTree = "<group>"; };
+		4222E4DA18B929A2008B9DB2 /* AVCamRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamRecorder.m; sourceTree = "<group>"; };
+		4222E4DB18B929A2008B9DB2 /* AVCamUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamUtilities.h; sourceTree = "<group>"; };
+		4222E4DC18B929A2008B9DB2 /* AVCamUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamUtilities.m; sourceTree = "<group>"; };
+		4222E4DD18B929A2008B9DB2 /* CaptureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureManager.h; sourceTree = "<group>"; };
+		4222E4DE18B929A2008B9DB2 /* CaptureManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureManager.m; sourceTree = "<group>"; };
+		4222E4E218B929B0008B9DB2 /* KZCameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZCameraView.h; sourceTree = "<group>"; };
+		4222E4E318B929B0008B9DB2 /* KZCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZCameraView.m; sourceTree = "<group>"; };
+		4222E4E618B92A03008B9DB2 /* DKRecorderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKRecorderViewController.h; sourceTree = "<group>"; };
+		4222E4E718B92A03008B9DB2 /* DKRecorderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKRecorderViewController.m; sourceTree = "<group>"; };
+		4222E4E918B936FD008B9DB2 /* DKMyCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKMyCollectionController.h; sourceTree = "<group>"; };
+		4222E4EA18B936FD008B9DB2 /* DKMyCollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKMyCollectionController.m; sourceTree = "<group>"; };
+		426C88E1188C867E00D03CE9 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		426C88E2188C867E00D03CE9 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		426C88E3188C867E00D03CE9 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,18 +251,18 @@
 				377C17EA1880867200DEEE72 /* ImageIO.framework in Frameworks */,
 				377C17E81880866B00DEEE72 /* AVFoundation.framework in Frameworks */,
 				377C17E61880866400DEEE72 /* QuartzCore.framework in Frameworks */,
+				426C88E4188C867E00D03CE9 /* Parse.framework in Frameworks */,
 				377C17E41880865B00DEEE72 /* Security.framework in Frameworks */,
 				377C17E21880865200DEEE72 /* AudioToolbox.framework in Frameworks */,
 				377C17E01880864A00DEEE72 /* SystemConfiguration.framework in Frameworks */,
 				377C17DE1880864100DEEE72 /* CFNetwork.framework in Frameworks */,
 				37DE8B8C187F1FCB003E8B70 /* CoreGraphics.framework in Frameworks */,
 				377C17DC188085F800DEEE72 /* MobileCoreServices.framework in Frameworks */,
-				377C17D51880830700DEEE72 /* FacebookSDK.framework in Frameworks */,
 				37DE8B8E187F1FCB003E8B70 /* UIKit.framework in Frameworks */,
 				37DE8B8A187F1FCB003E8B70 /* Foundation.framework in Frameworks */,
+				426C88E5188C867E00D03CE9 /* FacebookSDK.framework in Frameworks */,
 				377C17FC188096F200DEEE72 /* libsqlite3.dylib in Frameworks */,
 				377C17FD188096F200DEEE72 /* libz.1.1.3.dylib in Frameworks */,
-				377C17D81880830700DEEE72 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,12 +330,12 @@
 		377C17C81880830700DEEE72 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				426C88E1188C867E00D03CE9 /* Parse.framework */,
+				426C88E2188C867E00D03CE9 /* FacebookSDK.framework */,
+				426C88E3188C867E00D03CE9 /* FacebookSDKResources.bundle */,
 				3751289E188333CF001934A4 /* UIKit+AFNetworking */,
 				375128811883317E001934A4 /* AFNetworking */,
 				377C18161881F52D00DEEE72 /* MMDrawerController */,
-				377C17CE1880830700DEEE72 /* Parse.framework */,
-				377C17C91880830700DEEE72 /* FacebookSDK.framework */,
-				377C17CA1880830700DEEE72 /* FacebookSDKResources.bundle */,
 				377C18151881D3A800DEEE72 /* UIImage Categories */,
 				377C17CB1880830700DEEE72 /* MBProgressHUD */,
 				377C17CF1880830700DEEE72 /* Reachability */,
@@ -436,6 +454,8 @@
 		37DE8B8F187F1FCB003E8B70 /* vidIOS */ = {
 			isa = PBXGroup;
 			children = (
+				4222E4E518B929BD008B9DB2 /* KZCameraView */,
+				37DE8B9B187F1FCB003E8B70 /* Main_iPhone.storyboard */,
 				37DE8B98187F1FCB003E8B70 /* DKAppDelegate.h */,
 				37DE8B99187F1FCB003E8B70 /* DKAppDelegate.m */,
 				377C17F7188091AA00DEEE72 /* DKWelcomeViewController.h */,
@@ -444,11 +464,14 @@
 				377C17C61880828500DEEE72 /* DKLogInViewController.m */,
 				37DE8BCA187F5863003E8B70 /* DKNavigationController.h */,
 				37DE8BCB187F5863003E8B70 /* DKNavigationController.m */,
-				37DE8B9B187F1FCB003E8B70 /* Main_iPhone.storyboard */,
 				3750874218838D16009478D1 /* DKProgressViewController.h */,
 				3750874318838D16009478D1 /* DKProgressViewController.m */,
+				4222E4E918B936FD008B9DB2 /* DKMyCollectionController.h */,
+				4222E4EA18B936FD008B9DB2 /* DKMyCollectionController.m */,
 				377C1826188312FB00DEEE72 /* DKNameViewController.h */,
 				377C1827188312FB00DEEE72 /* DKNameViewController.m */,
+				4222E4E618B92A03008B9DB2 /* DKRecorderViewController.h */,
+				4222E4E718B92A03008B9DB2 /* DKRecorderViewController.m */,
 				377C18291883132900DEEE72 /* DKFriendsViewController.h */,
 				377C182A1883132900DEEE72 /* DKFriendsViewController.m */,
 				375128B518833554001934A4 /* DKFriendViewCell.h */,
@@ -500,6 +523,21 @@
 				37DE8BB7187F1FCB003E8B70 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4222E4E518B929BD008B9DB2 /* KZCameraView */ = {
+			isa = PBXGroup;
+			children = (
+				4222E4D918B929A2008B9DB2 /* AVCamRecorder.h */,
+				4222E4DA18B929A2008B9DB2 /* AVCamRecorder.m */,
+				4222E4DB18B929A2008B9DB2 /* AVCamUtilities.h */,
+				4222E4DC18B929A2008B9DB2 /* AVCamUtilities.m */,
+				4222E4DD18B929A2008B9DB2 /* CaptureManager.h */,
+				4222E4DE18B929A2008B9DB2 /* CaptureManager.m */,
+				4222E4E218B929B0008B9DB2 /* KZCameraView.h */,
+				4222E4E318B929B0008B9DB2 /* KZCameraView.m */,
+			);
+			name = KZCameraView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -591,7 +629,7 @@
 				37DE8BA0187F1FCB003E8B70 /* Main_iPad.storyboard in Resources */,
 				37DE8BA8187F1FCB003E8B70 /* Images.xcassets in Resources */,
 				37DE8B9D187F1FCB003E8B70 /* Main_iPhone.storyboard in Resources */,
-				377C17D61880830700DEEE72 /* FacebookSDKResources.bundle in Resources */,
+				426C88E6188C867E00D03CE9 /* FacebookSDKResources.bundle in Resources */,
 				37DE8B94187F1FCB003E8B70 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -616,15 +654,18 @@
 				377C18141881D3A000DEEE72 /* UIImage+RoundedCornerAdditions.m in Sources */,
 				377C1828188312FB00DEEE72 /* DKNameViewController.m in Sources */,
 				377C17F9188091AA00DEEE72 /* DKWelcomeViewController.m in Sources */,
+				4222E4EB18B936FD008B9DB2 /* DKMyCollectionController.m in Sources */,
 				375128B3188333CF001934A4 /* UIProgressView+AFNetworking.m in Sources */,
 				377C18021881A0FE00DEEE72 /* DKConstants.m in Sources */,
 				3751289A1883317E001934A4 /* AFURLConnectionOperation.m in Sources */,
 				377C18231881F52D00DEEE72 /* UIViewController+MMDrawerController.m in Sources */,
 				37DE8BCC187F5863003E8B70 /* DKNavigationController.m in Sources */,
+				4222E4E118B929A2008B9DB2 /* CaptureManager.m in Sources */,
 				377C18131881D3A000DEEE72 /* UIImage+ResizeAdditions.m in Sources */,
 				377C182E1883165E00DEEE72 /* DKtmpViewController.m in Sources */,
 				37DE8B96187F1FCB003E8B70 /* main.m in Sources */,
 				377C17D91880830700DEEE72 /* Reachability.m in Sources */,
+				4222E4E418B929B0008B9DB2 /* KZCameraView.m in Sources */,
 				375128AE188333CF001934A4 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				375128951883317E001934A4 /* AFHTTPRequestOperation.m in Sources */,
 				375128BD18837191001934A4 /* PAPImageView.m in Sources */,
@@ -637,11 +678,14 @@
 				377C18081881D30300DEEE72 /* PAPCache.m in Sources */,
 				375128961883317E001934A4 /* AFHTTPRequestOperationManager.m in Sources */,
 				375128971883317E001934A4 /* AFHTTPSessionManager.m in Sources */,
+				4222E4E818B92A03008B9DB2 /* DKRecorderViewController.m in Sources */,
+				4222E4DF18B929A2008B9DB2 /* AVCamRecorder.m in Sources */,
 				3750874418838D16009478D1 /* DKProgressViewController.m in Sources */,
 				375128B4188333CF001934A4 /* UIWebView+AFNetworking.m in Sources */,
 				377C18121881D3A000DEEE72 /* UIImage+AlphaAdditions.m in Sources */,
 				3751289C1883317E001934A4 /* AFURLResponseSerialization.m in Sources */,
 				3751289B1883317E001934A4 /* AFURLRequestSerialization.m in Sources */,
+				4222E4E018B929A2008B9DB2 /* AVCamUtilities.m in Sources */,
 				377C18071881D30300DEEE72 /* PAPUtility.m in Sources */,
 				375128B2188333CF001934A4 /* UIImageView+AFNetworking.m in Sources */,
 				37DE8B9A187F1FCB003E8B70 /* DKAppDelegate.m in Sources */,
@@ -792,12 +836,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/karsh/vidIOS7/vidIOS/External,
+					/Users/DK/Dev/vidios7/vidIOS/External,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "vidIOS/vidIOS-Prefix.pch";
 				INFOPLIST_FILE = "vidIOS/vidIOS-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5BA949C2-54AF-4900-93F9-19A6783E34C4";
+				PROVISIONING_PROFILE = "8632500B-B3F7-4871-9CBF-BBABB61EF28D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -811,12 +856,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/karsh/vidIOS7/vidIOS/External,
+					/Users/DK/Dev/vidios7/vidIOS/External,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "vidIOS/vidIOS-Prefix.pch";
 				INFOPLIST_FILE = "vidIOS/vidIOS-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5BA949C2-54AF-4900-93F9-19A6783E34C4";
+				PROVISIONING_PROFILE = "8632500B-B3F7-4871-9CBF-BBABB61EF28D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
