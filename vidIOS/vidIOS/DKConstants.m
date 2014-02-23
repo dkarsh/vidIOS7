@@ -48,6 +48,7 @@ NSString *const kPAPActivityFromUserKey    = @"fromUser";
 NSString *const kPAPActivityToUserKey      = @"toUser";
 NSString *const kPAPActivityContentKey     = @"content";
 NSString *const kPAPActivityPhotoKey       = @"photo";
+NSString *const kPAInvitingFriends       = @"invitingFriends";
 
 // Type values
 NSString *const kPAPActivityTypeLike       = @"like";

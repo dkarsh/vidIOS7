@@ -57,6 +57,7 @@ extern NSString *const kPAPActivityFromUserKey;
 extern NSString *const kPAPActivityToUserKey;
 extern NSString *const kPAPActivityContentKey;
 extern NSString *const kPAPActivityPhotoKey;
+extern NSString *const kPAInvitingFriends;
 
 // Type values
 extern NSString *const kPAPActivityTypeLike;

@@ -31,7 +31,7 @@
     PFImageView *repImageView = [[PFImageView alloc]initWithFrame:profileImage.frame];
 
     CALayer *layer = [repImageView layer];
-    layer.cornerRadius = 4.0f;
+    layer.cornerRadius = 14.0f;
     layer.masksToBounds = YES;
     
     [self.view addSubview:repImageView];

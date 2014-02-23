@@ -39,8 +39,8 @@
         [self performSegueWithIdentifier:@"cool" sender:nil];
     }
     // Refresh current user with server side data -- checks if user is still valid and so on
-    [[PFUser currentUser] refreshInBackgroundWithTarget:self
-                                               selector:@selector(refreshCurrentUserCallbackWithResult:error:)];
+//    [[PFUser currentUser] refreshInBackgroundWithTarget:self
+//                                               selector:@selector(refreshCurrentUserCallbackWithResult:error:)];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -128,70 +128,70 @@
         [[PAPCache sharedCache] setFacebookFriends:facebookIds];
         
         if (user) {
-            if (![user objectForKey:kPAPUserAlreadyAutoFollowedFacebookFriendsKey]) {
-                self.hud.labelText = NSLocalizedString(@"Following Friends", nil);
-                firstLaunch = YES;
-                
-                [user setObject:@YES forKey:kPAPUserAlreadyAutoFollowedFacebookFriendsKey];
-                NSError *error = nil;
-                
-                // find common Facebook friends already using Anypic
-                PFQuery *facebookFriendsQuery = [PFUser query];
-                [facebookFriendsQuery whereKey:kPAPUserFacebookIDKey containedIn:facebookIds];
-                
-                // auto-follow Parse employees
-                PFQuery *autoFollowAccountsQuery = [PFUser query];
-                [autoFollowAccountsQuery whereKey:kPAPUserFacebookIDKey containedIn:kPAPAutoFollowAccountFacebookIds];
-                
-                // combined query
-                PFQuery *query = [PFQuery orQueryWithSubqueries:[NSArray arrayWithObjects:autoFollowAccountsQuery,facebookFriendsQuery, nil]];
-                
-                NSArray *anypicFriends = [query findObjects:&error];
-                
-                if (!error) {
-                    [anypicFriends enumerateObjectsUsingBlock:^(PFUser *newFriend, NSUInteger idx, BOOL *stop) {
-                        PFObject *joinActivity = [PFObject objectWithClassName:kPAPActivityClassKey];
-                        [joinActivity setObject:user forKey:kPAPActivityFromUserKey];
-                        [joinActivity setObject:newFriend forKey:kPAPActivityToUserKey];
-                        [joinActivity setObject:kPAPActivityTypeJoined forKey:kPAPActivityTypeKey];
-                        
-                        PFACL *joinACL = [PFACL ACL];
-                        [joinACL setPublicReadAccess:YES];
-                        joinActivity.ACL = joinACL;
-                        
-                        // make sure our join activity is always earlier than a follow
-                        [joinActivity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                            [PAPUtility followUserInBackground:newFriend block:^(BOOL succeeded, NSError *error) {
-                                // This block will be executed once for each friend that is followed.
-                                // We need to refresh the timeline when we are following at least a few friends
-                                // Use a timer to avoid refreshing innecessarily
-                                if (self.autoFollowTimer) {
-                                    [self.autoFollowTimer invalidate];
-                                }
-                                
-                                self.autoFollowTimer = [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(autoFollowTimerFired:) userInfo:nil repeats:NO];
-                            }];
-                        }];
-                    }];
-                }
-                
-                if (![self shouldProceedToMainInterface:user]) {
-                    [self logOut];
-                    return;
-                }
-                
-                if (!error) {
-                    [MBProgressHUD hideHUDForView:self.view animated:NO];
-                    if (anypicFriends.count > 0) {
-                        self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:NO];
-                        self.hud.dimBackground = YES;
-                        self.hud.labelText = NSLocalizedString(@"Following Friends", nil);
-                    } else {
-//                        [self.homeViewController loadObjects];
-                    }
-                }
-            }
-            [user saveEventually];
+//            if (![user objectForKey:kPAPUserAlreadyAutoFollowedFacebookFriendsKey]) {
+//                self.hud.labelText = NSLocalizedString(@"Following Friends", nil);
+//                firstLaunch = YES;
+//                
+//                [user setObject:@YES forKey:kPAPUserAlreadyAutoFollowedFacebookFriendsKey];
+//                NSError *error = nil;
+//                
+//                // find common Facebook friends already using Anypic
+//                PFQuery *facebookFriendsQuery = [PFUser query];
+//                [facebookFriendsQuery whereKey:kPAPUserFacebookIDKey containedIn:facebookIds];
+//                
+//                // auto-follow Parse employees
+//                PFQuery *autoFollowAccountsQuery = [PFUser query];
+//                [autoFollowAccountsQuery whereKey:kPAPUserFacebookIDKey containedIn:kPAPAutoFollowAccountFacebookIds];
+//                
+//                // combined query
+//                PFQuery *query = [PFQuery orQueryWithSubqueries:[NSArray arrayWithObjects:autoFollowAccountsQuery,facebookFriendsQuery, nil]];
+//                
+//                NSArray *anypicFriends = [query findObjects:&error];
+//                
+//                if (!error) {
+//                    [anypicFriends enumerateObjectsUsingBlock:^(PFUser *newFriend, NSUInteger idx, BOOL *stop) {
+//                        PFObject *joinActivity = [PFObject objectWithClassName:kPAPActivityClassKey];
+//                        [joinActivity setObject:user forKey:kPAPActivityFromUserKey];
+//                        [joinActivity setObject:newFriend forKey:kPAPActivityToUserKey];
+//                        [joinActivity setObject:kPAPActivityTypeJoined forKey:kPAPActivityTypeKey];
+//                        
+//                        PFACL *joinACL = [PFACL ACL];
+//                        [joinACL setPublicReadAccess:YES];
+//                        joinActivity.ACL = joinACL;
+//                        
+//                        // make sure our join activity is always earlier than a follow
+//                        [joinActivity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//                            [PAPUtility followUserInBackground:newFriend block:^(BOOL succeeded, NSError *error) {
+//                                // This block will be executed once for each friend that is followed.
+//                                // We need to refresh the timeline when we are following at least a few friends
+//                                // Use a timer to avoid refreshing innecessarily
+//                                if (self.autoFollowTimer) {
+//                                    [self.autoFollowTimer invalidate];
+//                                }
+//                                
+//                                self.autoFollowTimer = [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(autoFollowTimerFired:) userInfo:nil repeats:NO];
+//                            }];
+//                        }];
+//                    }];
+//                }
+//                
+//                if (![self shouldProceedToMainInterface:user]) {
+//                    [self logOut];
+//                    return;
+//                }
+//                
+//                if (!error) {
+//                    [MBProgressHUD hideHUDForView:self.view animated:NO];
+//                    if (anypicFriends.count > 0) {
+//                        self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:NO];
+//                        self.hud.dimBackground = YES;
+//                        self.hud.labelText = NSLocalizedString(@"Following Friends", nil);
+//                    } else {
+////                        [self.homeViewController loadObjects];
+//                    }
+//                }
+//            }
+//            [user saveEventually];
         }
         
         else {

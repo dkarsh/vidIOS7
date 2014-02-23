@@ -10,6 +10,8 @@
 	<string>vidIOS</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>498D308C-3259-4BDE-9D49-85E7824DD3A6</key>
+		<string>https://github.com/AFNetworking/AFNetworking.git</string>
 		<key>4F5B03E2-3CE8-4560-814F-C6DFE073B237</key>
 		<string>https://github.com/dkarsh/vidIOS7</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>vidIOS/vidIOS.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>498D308C-3259-4BDE-9D49-85E7824DD3A6</key>
+		<string>../../../../AFNetworking</string>
 		<key>4F5B03E2-3CE8-4560-814F-C6DFE073B237</key>
 		<string>../../..</string>
 	</dict>
@@ -28,6 +32,14 @@
 	<string>4F5B03E2-3CE8-4560-814F-C6DFE073B237</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>498D308C-3259-4BDE-9D49-85E7824DD3A6</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AFNetworking</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

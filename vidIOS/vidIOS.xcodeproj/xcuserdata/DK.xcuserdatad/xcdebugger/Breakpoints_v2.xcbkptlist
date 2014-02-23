@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "vidIOS/DKNameViewController.m"
-            timestampString = "414785247.71101"
+            filePath = "../../AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m"
+            timestampString = "414820379.49176"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "-prepareForSegue:sender:"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "-setImageWithURLRequest:placeholderImage:success:failure:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "vidIOS/DKWelcomeViewController.m"
-            timestampString = "414788608.643547"
+            filePath = "../../AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m"
+            timestampString = "414820730.102584"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "-shouldProceedToMainInterface:"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "-setImageWithURLRequest:placeholderImage:success:failure:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,14 +41,44 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "vidIOS/DKProgressViewController.m"
-            timestampString = "414790241.091852"
+            filePath = "vidIOS/DKMyCollectionCell.m"
+            timestampString = "414828789.241929"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "-setProject:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DKMyCollectionCell setProject:]"
+                  moduleName = "vidIOS"
+                  urlString = "file:///Users/DK/Dev/vidios7/vidIOS/vidIOS/DKMyCollectionCell.m"
+                  timestampString = "414828454.462808"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "182">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__33-[DKMyCollectionCell setProject:]_block_invoke"
+                  moduleName = "vidIOS"
+                  urlString = "file:///Users/DK/Dev/vidios7/vidIOS/vidIOS/DKMyCollectionCell.m"
+                  timestampString = "414828454.462917"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "82">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -57,45 +87,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "vidIOS/DKMyCollectionController.m"
-            timestampString = "414793386.263649"
+            filePath = "vidIOS/DKMyCollectionCell.m"
+            timestampString = "414828789.241929"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "-collectionView:viewForSupplementaryElementOfKind:atIndexPath:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "vidIOS/DKMyCollectionController.m"
-            timestampString = "414793386.263649"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
-            landmarkName = "-collectionView:cellForItemAtIndexPath:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "vidIOS/DKMyCollectionController.m"
-            timestampString = "414793309.137044"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "-setProject:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -7,6 +7,7 @@
 //
 
 #import "DKMyCollectionController.h"
+#import "DKMyCollectionCell.h"
 
 @interface DKMyCollectionController ()
 @property (nonatomic,strong) NSArray *allMyProjects;
@@ -67,67 +68,16 @@
 }
 
 
-- (UICollectionReusableView*)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
-{
-    UICollectionReusableView * view = nil;
-    
-    PFObject *obj = self.allMyProjects[indexPath.section];
-    NSString *name = [obj objectForKey:@"projectName"];
-    
-    
-    if ([kind isEqualToString:UICollectionElementKindSectionHeader])
-    {
-        UICollectionReusableView *header =
-        [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
-                                           withReuseIdentifier:@"header"
-                                                  forIndexPath:indexPath];
 
-        UILabel *lable;
-        if ([header viewWithTag:10])
-        {
-           lable =(UILabel *)[header viewWithTag:10];
-            
-        }else{
-            lable = [[UILabel alloc]init];
-            lable.tag = 10;
-            [header addSubview:lable];
-        }
-        
-        lable.text = name;
-        
-    }
-    else if ([kind isEqualToString:UICollectionElementKindSectionFooter])
-    {
-//        ColorSectionFooterView *footer = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter
-//                                                                            withReuseIdentifier:NSStringFromClass([ColorSectionFooterView class])
-//                                                                                   forIndexPath:indexPath];
-//        footer.sectionIndex = indexPath.section;
-//        footer.delegate = self;
-//        view = footer;
-    }
-    
-    return view;
-}
 
 - (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *identifier = @"Cell";
-    UICollectionViewCell *cell  = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    DKMyCollectionCell *cell  = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     PFObject *obj = self.allMyProjects[indexPath.section];
-    NSString *name = [[obj objectForKey:@"projectName"]uppercaseString];
-    UILabel *lable;
-    if ([cell viewWithTag:10])
-    {
-        lable =(UILabel *)[cell viewWithTag:10];
-        
-    }else{
-        lable = [[UILabel alloc]init];
-        lable.tag = 10;
-        [cell addSubview:lable];
-    }
-    
-    lable.text = name;
-
+    NSString *name = [[obj objectForKey:@"projectName"]capitalizedString];
+    cell.projectLabel.text = name;
+    [cell setProject:obj];
 //    [cell.contentView addSubview:label];
     
 //    NSArray *colorNames = self.sectionedColorNames[indexPath.section];

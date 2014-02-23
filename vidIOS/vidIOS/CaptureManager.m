@@ -54,6 +54,7 @@
 #import <MobileCoreServices/UTCoreTypes.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <ImageIO/CGImageProperties.h>
+#import "AFURLSessionManager.h"
 
 #define MAX_DURATION 0.25
 
@@ -342,6 +343,10 @@
         
         __block id weakSelf = self;
         
+
+        
+        
+        
         [self.exportSession exportAsynchronouslyWithCompletionHandler:^{
             NSLog (@"i is in your block, exportin. status is %ld",(long)self.exportSession.status);
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -350,6 +355,36 @@
         }];
     }
 }
+
+
+//+ (NSURLSessionDataTask *)globalTimelinePostsWithBlock:(void (^)(NSArray *posts, NSError *error))block {
+//    return [[AFAppDotNetAPIClient sharedClient] GET:@"stream/0/posts/stream/global" parameters:nil success:^(NSURLSessionDataTask * __unused task, id JSON) {
+//        NSArray *postsFromResponse = [JSON valueForKeyPath:@"data"];
+//        NSMutableArray *mutablePosts = [NSMutableArray arrayWithCapacity:[postsFromResponse count]];
+//        for (NSDictionary *attributes in postsFromResponse) {
+//            Post *post = [[Post alloc] initWithAttributes:attributes];
+//            [mutablePosts addObject:post];
+//        }
+//        
+//        if (block) {
+//            block([NSArray arrayWithArray:mutablePosts], nil);
+//        }
+//    } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
+//        if (block) {
+//            block([NSArray array], error);
+//        }
+//    }];
+//}
+//
+//NSURLSessionTask *task = [Post globalTimelinePostsWithBlock:^(NSArray *posts, NSError *error) {
+//    if (!error) {
+//        self.posts = posts;
+//        [self.tableView reloadData];
+//    }
+//}];
+//
+//[UIAlertView showAlertViewForTaskWithErrorOnCompletion:task delegate:nil];
+//[self.refreshControl setRefreshingWithStateOfTask:task];
 
 -(void)exportDidFinish:(AVAssetExportSession*)session withCompletionBlock:(void(^)(BOOL success))completion {
     self.exportSession = nil;
@@ -375,18 +410,45 @@
     if (session.status == AVAssetExportSessionStatusCompleted) {
         NSURL *outputURL = session.outputURL;
         ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
-        if ([library videoAtPathIsCompatibleWithSavedPhotosAlbum:outputURL]) {
-            [library writeVideoAtPathToSavedPhotosAlbum:outputURL completionBlock:^(NSURL *assetURL, NSError *error){
-                //delete file from documents after saving to camera roll
-                [weakSelf removeFile:outputURL];
-                
-                if (error) {
-                    completion (NO);
-                } else {
-                    completion (YES);
-                }
-            }];
-        }
+//        if ([library videoAtPathIsCompatibleWithSavedPhotosAlbum:outputURL]) {
+//            [library writeVideoAtPathToSavedPhotosAlbum:outputURL completionBlock:^(NSURL *assetURL, NSError *error){
+//                //delete file from documents after saving to camera roll
+//                [weakSelf removeFile:outputURL];
+//                
+//                if (error) {
+//                    completion (NO);
+//                } else {
+//                    completion (YES);
+//                }
+//            }];
+//        }
+//        -F "filepath=wp214_592892941wp214_New_Server”
+//        -F "submit=Upload”
+//        -F "file=@/private/var/mobile/Applications/C54FC919-AAA2-4ADE-9763-7874F5C2F763/tmp/592892941_1388165137_2.mp4;type=video/mp4”
+//        
+//        
+        NSString *uploadURL = @"http://immense-mesa-4736.herokuapp.com/videoupload/upload.php";
+        NSMutableURLRequest *request =
+        [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST"
+                                                                   URLString:uploadURL
+                                                                  parameters:@{@"filepath": @"dkarsh" , @"submit":@"Upload"}
+                                                   constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+            [formData appendPartWithFileURL:outputURL name:@"file" fileName:@"daniel" mimeType:@"video/mp4" error:nil];
+        } error:nil];
+        
+        AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+        NSProgress *progress = nil;
+        
+        NSURLSessionUploadTask *uploadTask = [manager uploadTaskWithStreamedRequest:request progress:&progress completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+            if (error) {
+                NSLog(@"Error: %@", error);
+            } else {
+                NSLog(@"%@ %@", response, responseObject);
+            }
+        }];
+        
+        [uploadTask resume];
+          
     }
     [self.assets removeAllObjects];
 }

@@ -24,8 +24,9 @@
     [NSMutableURLRequest requestWithURL:[NSURL URLWithString:imageURLString]];
     [request addValue:@"image/*" forHTTPHeaderField:@"Accept"];
     CALayer *layer = [_photoImageView layer];
-    layer.cornerRadius = 4.0f;
+    layer.cornerRadius = 14.0f;
     layer.masksToBounds = YES;
+    self.photoImageView.image = nil;
     [self.photoImageView setImageWithURLRequest:request
                                placeholderImage:nil
                                         success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {

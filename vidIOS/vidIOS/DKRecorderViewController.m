@@ -68,7 +68,7 @@
         if (success)
         {
             NSLog(@"WILL PUSH NEW CONTROLLER HERE");
-            [self performSegueWithIdentifier:@"SavedVideoPush" sender:sender];
+//            [self performSegueWithIdentifier:@"SavedVideoPush" sender:sender];
         }
     }];
 }
