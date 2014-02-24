@@ -72,7 +72,7 @@ static void *AVCamFocusModeObserverContext = &AVCamFocusModeObserverContext;
 
 @implementation KZCameraView
 
-- (id)initWithFrame:(CGRect)frame withVideoPreviewFrame:(CGRect)videoFrame
+- (id)initWithFrame:(CGRect)frame withVideoPreviewFrame:(CGRect)videoFrame withProject:(PFObject*)pr
 {
     self = [super initWithFrame:frame];
     if (self) {

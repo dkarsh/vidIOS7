@@ -4,18 +4,28 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m"
-            timestampString = "414820379.49176"
+            filePath = "vidIOS/DKMyCollectionController.m"
+            timestampString = "414889153.747231"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "-setImageWithURLRequest:placeholderImage:success:failure:"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "-collectionView:didSelectItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +35,27 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m"
-            timestampString = "414820730.102584"
+            filePath = "vidIOS/CaptureManager.m"
+            timestampString = "414902140.906508"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
-            landmarkName = "-setImageWithURLRequest:placeholderImage:success:failure:"
+            startingLineNumber = "57"
+            endingLineNumber = "57">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../AFNetworking/AFNetworking/AFURLRequestSerialization.m"
+            timestampString = "414903550.308194"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "575"
+            endingLineNumber = "575"
+            landmarkName = "-appendPartWithFileURL:name:error:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,59 +65,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "vidIOS/DKMyCollectionCell.m"
-            timestampString = "414828789.241929"
+            filePath = "../../AFNetworking/AFNetworking/AFURLRequestSerialization.m"
+            timestampString = "414903867.291015"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "-setProject:"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[DKMyCollectionCell setProject:]"
-                  moduleName = "vidIOS"
-                  urlString = "file:///Users/DK/Dev/vidios7/vidIOS/vidIOS/DKMyCollectionCell.m"
-                  timestampString = "414828454.462808"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "182">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__33-[DKMyCollectionCell setProject:]_block_invoke"
-                  moduleName = "vidIOS"
-                  urlString = "file:///Users/DK/Dev/vidios7/vidIOS/vidIOS/DKMyCollectionCell.m"
-                  timestampString = "414828454.462917"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "82">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "vidIOS/DKMyCollectionCell.m"
-            timestampString = "414828789.241929"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "-setProject:"
+            startingLineNumber = "579"
+            endingLineNumber = "579"
+            landmarkName = "-appendPartWithFileURL:name:error:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

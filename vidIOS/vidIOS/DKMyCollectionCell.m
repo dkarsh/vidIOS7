@@ -13,13 +13,20 @@
 @synthesize project;
 @synthesize repImageView;
 
-- (id)initWithFrame:(CGRect)frame
+
+
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithFrame:frame];
+    self = [super initWithCoder:aDecoder];
     if (self) {
-        // Initialization code
+        
     }
     return self;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
+{
+    NSLog(@"touchME");
 }
 
 - (void)setProject:(PFObject *)tproject

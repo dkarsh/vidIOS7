@@ -54,11 +54,12 @@
 #import <MobileCoreServices/UTCoreTypes.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <ImageIO/CGImageProperties.h>
-#import "AFURLSessionManager.h"
+#import "AFHTTPRequestOperationManager.h"
 
 #define MAX_DURATION 0.25
 
 @interface CaptureManager (RecorderDelegate) <AVCamRecorderDelegate>
+@property (nonatomic,strong) PFObject *project;
 @end
 
 
@@ -328,14 +329,14 @@
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
         NSString *path =  [documentsDirectory stringByAppendingPathComponent:
-                                 [NSString stringWithFormat:@"mergeVideo-%d.mov",arc4random() % 1000]];
+                                 [NSString stringWithFormat:@"mergeVideo-%d.mp4",arc4random() % 1000]];
         NSURL *url = [NSURL fileURLWithPath:path];
 
         // 5 - Create exporter
         self.exportSession = [[AVAssetExportSession alloc] initWithAsset:mixComposition
                                                                           presetName:AVAssetExportPresetHighestQuality];
         self.exportSession.outputURL = url;
-        self.exportSession.outputFileType = AVFileTypeQuickTimeMovie;
+        self.exportSession.outputFileType = AVFileTypeMPEG4;
         self.exportSession.shouldOptimizeForNetworkUse = YES;
         self.exportSession.videoComposition = videoComposition;
         
@@ -409,7 +410,7 @@
     
     if (session.status == AVAssetExportSessionStatusCompleted) {
         NSURL *outputURL = session.outputURL;
-        ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+//        ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
 //        if ([library videoAtPathIsCompatibleWithSavedPhotosAlbum:outputURL]) {
 //            [library writeVideoAtPathToSavedPhotosAlbum:outputURL completionBlock:^(NSURL *assetURL, NSError *error){
 //                //delete file from documents after saving to camera roll
@@ -422,33 +423,53 @@
 //                }
 //            }];
 //        }
-//        -F "filepath=wp214_592892941wp214_New_Server”
-//        -F "submit=Upload”
-//        -F "file=@/private/var/mobile/Applications/C54FC919-AAA2-4ADE-9763-7874F5C2F763/tmp/592892941_1388165137_2.mp4;type=video/mp4”
-//        
-//        
+//
         NSString *uploadURL = @"http://immense-mesa-4736.herokuapp.com/videoupload/upload.php";
+        
+        // 1. Create `AFHTTPRequestSerializer` which will create your request.
+        AFHTTPRequestSerializer *serializer = [AFHTTPRequestSerializer serializer];
+    
+        NSError* error = nil;
+        NSData* imageData = [NSData dataWithContentsOfURL:outputURL options:NSDataReadingUncached error:&error];
+        if (error) {
+            NSLog(@"%@", [error localizedDescription]);
+        } else {
+            NSLog(@"Data has loaded successfully.");
+        }
+        
+        // 2. Create an `NSMutableURLRequest`.
         NSMutableURLRequest *request =
-        [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST"
-                                                                   URLString:uploadURL
-                                                                  parameters:@{@"filepath": @"dkarsh" , @"submit":@"Upload"}
-                                                   constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-            [formData appendPartWithFileURL:outputURL name:@"file" fileName:@"daniel" mimeType:@"video/mp4" error:nil];
-        } error:nil];
+        [serializer multipartFormRequestWithMethod:@"POST" URLString:uploadURL
+                                        parameters:nil
+                         constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+                             [formData appendPartWithFileData:imageData
+                                                         name:@"filedata"
+                                                     fileName:@"kooolooolooo.mp4"
+                                                     mimeType:@"video/mp4"];
+                             
+                         }
+                                             error:nil];
         
-        AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-        NSProgress *progress = nil;
+        // 3. Create and use `AFHTTPRequestOperationManager` to create an `AFHTTPRequestOperation` from the `NSMutableURLRequest` that we just created.
+        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+        AFHTTPRequestOperation *operation =
+        [manager HTTPRequestOperationWithRequest:request
+                                         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                             NSLog(@"Success %@", responseObject);
+                                         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                             NSLog(@"Failure %@", error.description);
+                                         }];
         
-        NSURLSessionUploadTask *uploadTask = [manager uploadTaskWithStreamedRequest:request progress:&progress completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
-            if (error) {
-                NSLog(@"Error: %@", error);
-            } else {
-                NSLog(@"%@ %@", response, responseObject);
-            }
+        // 4. Set the progress block of the operation.
+        [operation setUploadProgressBlock:^(NSUInteger __unused bytesWritten,
+                                            long long totalBytesWritten,
+                                            long long totalBytesExpectedToWrite) {
+            NSLog(@"Wrote %lld/%lld", totalBytesWritten, totalBytesExpectedToWrite);
         }];
         
-        [uploadTask resume];
-          
+        // 5. Begin!
+        [operation start];
+        
     }
     [self.assets removeAllObjects];
 }

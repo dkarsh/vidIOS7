@@ -33,6 +33,7 @@
 @end
 
 @implementation DKRecorderViewController
+@synthesize project;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -55,7 +56,7 @@
     //Create CameraView
 	self.cam = [[KZCameraView alloc]initWithFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height - 64.0) withVideoPreviewFrame:CGRectMake(0.0, 0.0, 320.0, 320.0)];
     self.cam.maxDuration = 10.0;
-    self.cam.showCameraSwitch = YES; //Say YES to button to switch between front and back cameras
+    self.cam.showCameraSwitch = NO; //Say YES to button to switch between front and back cameras
     //Create "save" button
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Save" style:UIBarButtonItemStyleBordered target:self action:@selector(saveVideo:)];
     

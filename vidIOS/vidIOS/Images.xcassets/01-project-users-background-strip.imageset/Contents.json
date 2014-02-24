@@ -2,13 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "01-project-users-background-strip.png"
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "01-project-users-background-strip@2x.png"
+      "filename" : "01-project-users-background-strip.png"
     }
   ],
   "info" : {

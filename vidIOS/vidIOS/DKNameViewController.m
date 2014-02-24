@@ -67,11 +67,10 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     PFObject *wedeeoObject = [PFObject objectWithClassName:@"wedeeoProject"];
-    
     [wedeeoObject setObject:self.invitingFriends            forKey:@"invitingFriends"];
     [wedeeoObject setObject:[PFUser currentUser]            forKey:@"creator"];
     [wedeeoObject setObject:self.videoNameTextField.text    forKey:@"projectName"];
-    
+//    segue.destinationViewController 
     [wedeeoObject saveEventually:^(BOOL succeeded, NSError *error) {
         
     }];

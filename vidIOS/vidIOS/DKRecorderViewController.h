@@ -26,5 +26,5 @@
 #import <UIKit/UIKit.h>
 
 @interface DKRecorderViewController : UIViewController
-
+@property (nonatomic,strong) PFObject *project;
 @end

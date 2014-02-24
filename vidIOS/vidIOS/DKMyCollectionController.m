@@ -20,6 +20,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+//    self.view.backgroundColor =
+    
     PFQuery *iQuery = [PFQuery queryWithClassName:@"wedeeoProject"];
     [iQuery whereKey:@"creator" equalTo:[PFUser currentUser]];
     
@@ -52,48 +55,32 @@
 
 #pragma mark - UICollectionView Data Source
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-{
-    int a = self.allMyProjects.count;
-    
-    return a;
-}
+//- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+//{
+//    int a = self.allMyProjects.count;
+//    return a;
+//}
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    // Always one extra cell for the "add" cell
-//    NSMutableArray *sectionColorNames = self.allMyProjects[section];
-//    return sectionColorNames.count + 1;
-    return 1;
+    int a = self.allMyProjects.count;
+    return a;
 }
 
 
-
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"ShowProject" sender:self];
+}
 
 - (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *identifier = @"Cell";
     DKMyCollectionCell *cell  = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-    PFObject *obj = self.allMyProjects[indexPath.section];
+    PFObject *obj = self.allMyProjects[indexPath.row];
     NSString *name = [[obj objectForKey:@"projectName"]capitalizedString];
     cell.projectLabel.text = name;
     [cell setProject:obj];
-//    [cell.contentView addSubview:label];
-    
-//    NSArray *colorNames = self.sectionedColorNames[indexPath.section];
-//    if (indexPath.row == colorNames.count)
-//    {
-//        cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([AddCell class])
-//                                                         forIndexPath:indexPath];
-//    }
-//    else
-//    {
-//        ColorNameCell *cnCell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([ColorNameCell class])
-//                                                                          forIndexPath:indexPath];
-//        cnCell.colorName = colorNames[indexPath.item];
-//        cell = cnCell;
-//    }
-    
     return cell;
 }
 
