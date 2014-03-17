@@ -8,6 +8,7 @@
 
 #import "DKMyCollectionController.h"
 #import "DKMyCollectionCell.h"
+#import "DKProjectViewController.h"
 
 @interface DKMyCollectionController ()
 @property (nonatomic,strong) NSArray *allMyProjects;
@@ -68,10 +69,10 @@
 }
 
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    [self performSegueWithIdentifier:@"ShowProject" sender:self];
-}
+//- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    
+//}
 
 - (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -81,10 +82,18 @@
     NSString *name = [[obj objectForKey:@"projectName"]capitalizedString];
     cell.projectLabel.text = name;
     [cell setProject:obj];
+    [cell waitForTap:^(PFObject *prj) {
+         [self performSegueWithIdentifier:@"ShowProject" sender:prj];
+    }];
     return cell;
 }
 
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    DKProjectViewController *projectVC = segue.destinationViewController;
+    projectVC.project = sender;
+    
+}
 
 - (void)didReceiveMemoryWarning
 {

@@ -24,9 +24,14 @@
     return self;
 }
 
+-(void)waitForTap:(returnProjectBlock)tap
+{
+    _cellTappedReturnProject = tap;
+}
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 {
-    NSLog(@"touchME");
+    _cellTappedReturnProject(project);
 }
 
 - (void)setProject:(PFObject *)tproject
@@ -54,12 +59,13 @@
         }
         
     }];
-
+    [_allInvitesCollection reloadData];
 
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     int n = [[project objectForKey:kPAInvitingFriends]count];
+    
     return n;
 }
 
@@ -76,6 +82,9 @@
     
     NSString *facebookID = [[project objectForKey:kPAInvitingFriends] objectAtIndex:indexPath.row];
     [cell setFriend:facebookID];
+    [cell waitForTap:^(PFObject *prj) {
+        _cellTappedReturnProject(project);
+    }];
     return cell;
 }
 

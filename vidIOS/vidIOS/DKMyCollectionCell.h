@@ -13,4 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *projectLabel;
 @property (weak, nonatomic) IBOutlet PFImageView *repImageView;
 @property (strong,nonatomic) PFObject *project;
+@property (nonatomic,copy) returnProjectBlock cellTappedReturnProject ;
+-(void)waitForTap:(returnProjectBlock)tap;
 @end

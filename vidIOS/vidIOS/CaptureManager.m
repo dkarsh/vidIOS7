@@ -437,6 +437,11 @@
             NSLog(@"Data has loaded successfully.");
         }
         
+     
+        
+        NSString *userFBID  = [[PFUser currentUser]objectForKey:kPAPUserFacebookIDKey];
+        
+        NSString *videoName = [NSString stringWithFormat:@"%@_%@.mp4",[_project objectForKey:@"projectName"],userFBID];
         // 2. Create an `NSMutableURLRequest`.
         NSMutableURLRequest *request =
         [serializer multipartFormRequestWithMethod:@"POST" URLString:uploadURL
@@ -444,7 +449,7 @@
                          constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
                              [formData appendPartWithFileData:imageData
                                                          name:@"filedata"
-                                                     fileName:@"kooolooolooo.mp4"
+                                                     fileName:videoName
                                                      mimeType:@"video/mp4"];
                              
                          }

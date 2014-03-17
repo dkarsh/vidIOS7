@@ -88,6 +88,7 @@
 		4222E53018B979F6008B9DB2 /* DKMyCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4222E52F18B979F6008B9DB2 /* DKMyCollectionCell.m */; };
 		4222E53918BA687F008B9DB2 /* wedeeo-background-568-@x2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4222E53818BA687F008B9DB2 /* wedeeo-background-568-@x2.png */; };
 		4222E53F18BA71B2008B9DB2 /* DKStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4222E53E18BA71B2008B9DB2 /* DKStoryboardSegue.m */; };
+		42548C4B18D1373900E535A8 /* DKProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42548C4A18D1373900E535A8 /* DKProjectViewController.m */; };
 		426C88E4188C867E00D03CE9 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 426C88E1188C867E00D03CE9 /* Parse.framework */; };
 		426C88E5188C867E00D03CE9 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 426C88E2188C867E00D03CE9 /* FacebookSDK.framework */; };
 		426C88E6188C867E00D03CE9 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 426C88E3188C867E00D03CE9 /* FacebookSDKResources.bundle */; };
@@ -242,6 +243,8 @@
 		4222E53818BA687F008B9DB2 /* wedeeo-background-568-@x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wedeeo-background-568-@x2.png"; sourceTree = "<group>"; };
 		4222E53D18BA71B2008B9DB2 /* DKStoryboardSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKStoryboardSegue.h; sourceTree = "<group>"; };
 		4222E53E18BA71B2008B9DB2 /* DKStoryboardSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKStoryboardSegue.m; sourceTree = "<group>"; };
+		42548C4918D1373900E535A8 /* DKProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKProjectViewController.h; sourceTree = "<group>"; };
+		42548C4A18D1373900E535A8 /* DKProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKProjectViewController.m; sourceTree = "<group>"; };
 		426C88E1188C867E00D03CE9 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		426C88E2188C867E00D03CE9 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		426C88E3188C867E00D03CE9 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
@@ -419,6 +422,8 @@
 				4222E50818B94BD9008B9DB2 /* UIKit+AFNetworking */,
 				4222E4E518B929BD008B9DB2 /* KZCameraView */,
 				37DE8B9B187F1FCB003E8B70 /* Main_iPhone.storyboard */,
+				42548C4918D1373900E535A8 /* DKProjectViewController.h */,
+				42548C4A18D1373900E535A8 /* DKProjectViewController.m */,
 				4222E53D18BA71B2008B9DB2 /* DKStoryboardSegue.h */,
 				4222E53E18BA71B2008B9DB2 /* DKStoryboardSegue.m */,
 				37DE8B98187F1FCB003E8B70 /* DKAppDelegate.h */,
@@ -717,6 +722,7 @@
 				4222E51C18B94BD9008B9DB2 /* AFHTTPSessionManager.m in Sources */,
 				4222E53F18BA71B2008B9DB2 /* DKStoryboardSegue.m in Sources */,
 				4222E4E018B929A2008B9DB2 /* AVCamUtilities.m in Sources */,
+				42548C4B18D1373900E535A8 /* DKProjectViewController.m in Sources */,
 				377C18071881D30300DEEE72 /* PAPUtility.m in Sources */,
 				4222E52918B94BD9008B9DB2 /* UIRefreshControl+AFNetworking.m in Sources */,
 				37DE8B9A187F1FCB003E8B70 /* DKAppDelegate.m in Sources */,

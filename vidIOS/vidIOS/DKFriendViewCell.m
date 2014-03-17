@@ -23,9 +23,21 @@
     NSMutableURLRequest *request =
     [NSMutableURLRequest requestWithURL:[NSURL URLWithString:imageURLString]];
     [request addValue:@"image/*" forHTTPHeaderField:@"Accept"];
+    
+  
     CALayer *layer = [_photoImageView layer];
+    
+    
+    CALayer *rightBorder = [CALayer layer];
+    rightBorder.borderColor = [UIColor blackColor].CGColor;//[UIColor colorWithRed:7/256.f green:159/256.f blue:117/256.f alpha:100].CGColor;
+    rightBorder.borderWidth = 1;
+    rightBorder.frame = CGRectMake(0, 0, CGRectGetWidth(_photoImageView.frame), CGRectGetHeight(_photoImageView.frame));
+    rightBorder.cornerRadius = 14.0f;
+    rightBorder.borderWidth = 1.f;
     layer.cornerRadius = 14.0f;
     layer.masksToBounds = YES;
+    [layer addSublayer:rightBorder];
+    
     self.photoImageView.image = nil;
     [self.photoImageView setImageWithURLRequest:request
                                placeholderImage:nil
@@ -36,9 +48,15 @@
                                         }];
 }
 
+-(void)waitForTap:(returnProjectBlock)tap
+{
+    _cellTappedReturnProject = tap;
+}
+
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 {
-    NSLog(@"touchME");
+    _cellTappedReturnProject(nil);
 }
 
 

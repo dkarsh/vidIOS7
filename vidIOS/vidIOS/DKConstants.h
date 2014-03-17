@@ -11,7 +11,7 @@ typedef enum {
 	PAPActivityTabBarItemIndex = 2
 } PAPTabBarControllerViewControllerIndex;
 
-
+typedef void (^returnProjectBlock)(PFObject* prj);
 // Define an array of Facebook Ids for accounts to auto-follow on signup
 #define kPAPAutoFollowAccountFacebookIds @[ ]
 

@@ -33,6 +33,7 @@
 @property (nonatomic, assign) float maxDuration;
 @property (nonatomic,assign) BOOL showCameraSwitch;
 
-- (id)initWithFrame:(CGRect)frame withVideoPreviewFrame:(CGRect)videoFrame withProject:(PFObject*)pr
+- (id)initWithFrame:(CGRect)frame withVideoPreviewFrame:(CGRect)videoFrame withProject:(PFObject*)pr;
 - (void)saveVideoWithCompletionBlock:(void(^)(BOOL success))completion;
+
 @end

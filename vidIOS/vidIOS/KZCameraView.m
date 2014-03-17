@@ -78,6 +78,7 @@ static void *AVCamFocusModeObserverContext = &AVCamFocusModeObserverContext;
     if (self) {
         if ([self captureManager] == nil) {
             CaptureManager *manager = [[CaptureManager alloc] init];
+            manager.project = pr;
             [self setCaptureManager:manager];
             
             [[self captureManager] setDelegate:self];

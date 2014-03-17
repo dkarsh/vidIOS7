@@ -70,6 +70,7 @@
 @property (nonatomic,strong) NSMutableArray *assets;
 @property (nonatomic,assign) NSTimer *exportProgressBarTimer;
 @property (nonatomic,strong) AVAssetExportSession *exportSession;
+@property (nonatomic,strong) PFObject *project;
 
 - (BOOL) setupSession;
 - (void) startRecording;

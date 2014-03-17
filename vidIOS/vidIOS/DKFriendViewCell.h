@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface DKFriendViewCell : UICollectionViewCell
-- (void) setFriend:(NSString*)friendID;
+@property (nonatomic,copy) returnProjectBlock cellTappedReturnProject ;
+- (void)setFriend:(NSString*)friendID;
+- (void)waitForTap:(returnProjectBlock)tap;
 @end
